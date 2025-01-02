@@ -1,2 +1,5 @@
 __pycache__
 *.egg-info
+
+# Ignore because we're using this as a library.
+uv.lock
