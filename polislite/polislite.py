@@ -99,31 +99,32 @@ class PolisClusterer:
                     stance = 'strongly agrees with' if opinion > 0 else 'strongly disagrees with'
                     print(f'- {stance}: {stmt}')
 
-# Example usage
-statements = [
-    'Climate change requires immediate action',
-    'Nuclear power is necessary for clean energy',
-    'Carbon tax should be implemented globally',
-    'Individual actions matter for sustainability',
-    'Companies should be held liable for emissions'
-]
+if __name__ == "__main__":
+    # Example usage
+    statements = [
+        'Climate change requires immediate action',
+        'Nuclear power is necessary for clean energy',
+        'Carbon tax should be implemented globally',
+        'Individual actions matter for sustainability',
+        'Companies should be held liable for emissions'
+    ]
 
-votes = [
-    # Group 1: Environmental purists (anti-nuclear)
-    ['agree', 'disagree', 'agree', 'agree', 'agree'],
-    ['agree', 'disagree', 'agree', 'agree', 'agree'],
-    ['agree', 'disagree', 'agree', 'agree', 'agree'],
-    
-    # Group 2: Tech-focused environmentalists (pro-nuclear)
-    ['agree', 'agree', 'agree', 'disagree', 'agree'],
-    ['agree', 'agree', 'agree', 'disagree', 'agree'],
-    ['agree', 'agree', 'agree', 'disagree', 'agree'],
-    
-    # Group 3: Business-oriented (anti-regulation)
-    ['agree', 'agree', 'disagree', 'disagree', 'disagree'],
-    ['agree', 'agree', 'disagree', 'disagree', 'disagree'],
-    ['agree', 'agree', 'disagree', 'disagree', 'disagree']
-]
+    votes = [
+        # Group 1: Environmental purists (anti-nuclear)
+        ['agree', 'disagree', 'agree', 'agree', 'agree'],
+        ['agree', 'disagree', 'agree', 'agree', 'agree'],
+        ['agree', 'disagree', 'agree', 'agree', 'agree'],
+        
+        # Group 2: Tech-focused environmentalists (pro-nuclear)
+        ['agree', 'agree', 'agree', 'disagree', 'agree'],
+        ['agree', 'agree', 'agree', 'disagree', 'agree'],
+        ['agree', 'agree', 'agree', 'disagree', 'agree'],
+        
+        # Group 3: Business-oriented (anti-regulation)
+        ['agree', 'agree', 'disagree', 'disagree', 'disagree'],
+        ['agree', 'agree', 'disagree', 'disagree', 'disagree'],
+        ['agree', 'agree', 'disagree', 'disagree', 'disagree']
+    ]
 
-clusterer = PolisClusterer()
-points, clusters = clusterer.analyze_opinions(votes, statements)
+    clusterer = PolisClusterer()
+    points, clusters = clusterer.analyze_opinions(votes, statements)
