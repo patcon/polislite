@@ -4,11 +4,35 @@ A lightweight Pol.is-like.
 
 ## Setup
 
-    pip install scikit-learn
+    - [Install][install-uv] `uv` Python package manager
+
+   [install-uv]: https://docs.astral.sh/uv/getting-started/installation/
 
 ## Usage
 
-    python polislite.py
+This repo can be run as a self-contained example script, or used as a library.
+
+### As A Library
+
+This package can be installed as a library in another Python project using any package manager.
+
+    pip install git+https://github.com/patcon/polislite.git@python-package
+
+    uv add git+https://github.com/patcon/polislite.git@python-package
+
+This also makes it simple to use in a Jupyter Notebook.
+
+See sample notebook: [`polislite_library_usage.ipynb`][ipynb-example]
+
+   [ipynb-example]: /polislite_library_usage.ipynb
+
+### Example script
+
+    uv run python polislite/polislite.py
+
+### Development
+
+Run `make` to see shortcut tasks for working on this project.
 
 <details><summary>Output</summary>
 
